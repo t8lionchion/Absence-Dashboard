@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <div class="container-fluid bg-primary py-5 shadow text-white text-center">
+        <h1 class="display-4 fw-bold mb-0">Ted 的出缺席記錄</h1>
+        <p class="lead mt-2">每日出勤一目了然</p>
+    </div>
+
     <div class="row text-center mb-4  mt-4">
         <div class="col-md-4 col-lg-2">
             <div class="card shadow rounded">
@@ -65,7 +70,7 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-lg-4">
                 <div class="card">
                     <h1 class="card-title text-center bg-primary">出席狀況圓餅圖</h1>
@@ -74,22 +79,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card">
+            <div class="col-lg-4 ">
+                <div class="card ">
                     <h1 class="card-title text-center bg-secondary">每日上課時數折線圖</h1>
                     <div class="card-body d-flex justify-content-center">
                         <canvas id="ex08"></canvas>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
+                <div class="card mt-4">
                     <h1 class="card-title text-center bg-info">每日在校時數長條圖</h1>
                     <div class="card-body d-flex justify-content-center">
                         <canvas id="ex09"></canvas>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </body>
@@ -205,51 +209,51 @@
     fetchDataAndCreateChart();
 
     const ex09 = document.getElementById("ex09");
-async function fetchDataAndCreateScatter() {
-    try {
-        const response = await fetch("attendclasstime.json");
-        if (!response.ok) {
-            throw new Error(`HTTP 錯誤! 狀態: ${response.status}`);
-        }
-
-        const rawData = await response.json();
-
-        const barData = rawData.data.map(item => ({
-            x: item.class_date,
-            y: parseFloat(item.raw_hours)
-        }));
-
-        const barChart = new Chart(ex09, {
-            type: 'bar',
-            data: {
-                datasets: [{
-                    label: '每日在校時數',
-                    data: barData,
-                    backgroundColor: 'rgba(54, 162, 235, 0.6)'
-                }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        type: 'category',
-                        title: { display: true, text: '上課日期' }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: '在校時數' }
-                    }
-                },
-                
+    async function fetchDataAndCreateScatter() {
+        try {
+            const response = await fetch("attendclasstime.json");
+            if (!response.ok) {
+                throw new Error(`HTTP 錯誤! 狀態: ${response.status}`);
             }
-        });
 
-    } catch (error) {
-        console.error('載入資料失敗:', error);
-        alert('無法載入圖表資料，請檢查網路或檔案路徑！');
+            const rawData = await response.json();
+
+            const barData = rawData.data.map(item => ({
+                x: item.class_date,
+                y: parseFloat(item.raw_hours)
+            }));
+
+            const barChart = new Chart(ex09, {
+                type: 'bar',
+                data: {
+                    datasets: [{
+                        label: '每日在校時數',
+                        data: barData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'category',
+                            title: { display: true, text: '上課日期' }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: '在校時數' }
+                        }
+                    },
+
+                }
+            });
+
+        } catch (error) {
+            console.error('載入資料失敗:', error);
+            alert('無法載入圖表資料，請檢查網路或檔案路徑！');
+        }
     }
-}
 
-fetchDataAndCreateScatter();
+    fetchDataAndCreateScatter();
 
 </script>
 
