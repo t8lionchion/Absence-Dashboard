@@ -1,0 +1,104 @@
+{
+    "data": [
+        {
+            "class_date": "2025-04-15",
+            "raw_hours": "5.9"
+        },
+        {
+            "class_date": "2025-04-16",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-18",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-21",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-22",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-24",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-25",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-28",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-29",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-04-30",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-05",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-06",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-07",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-08",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-09",
+            "raw_hours": "3"
+        },
+        {
+            "class_date": "2025-05-12",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-13",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-14",
+            "raw_hours": "0"
+        },
+        {
+            "class_date": "2025-05-15",
+            "raw_hours": "8.5"
+        },
+        {
+            "class_date": "2025-05-16",
+            "raw_hours": "8.5"
+        },
+        {
+            "class_date": "2025-05-19",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-20",
+            "raw_hours": "3.57"
+        },
+        {
+            "class_date": "2025-05-21",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-22",
+            "raw_hours": "7.5"
+        },
+        {
+            "class_date": "2025-05-23",
+            "raw_hours": "7.5"
+        }
+    ]
+}
